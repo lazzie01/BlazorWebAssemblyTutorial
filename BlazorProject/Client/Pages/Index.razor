@@ -1,0 +1,25 @@
+﻿@page "/"
+@using BlazorProject.Shared
+@using Syncfusion.Blazor.Grids
+
+<SfGrid TValue="Employee" AllowPaging="true" AllowSorting="true">
+    <SfDataManager Adaptor="Adaptors.CustomAdaptor" AdaptorInstance="typeof(EmployeeAdaptor)"></SfDataManager>
+    <GridPageSettings PageSize="5" PageSizes="@PagerDropdown" PageCount="3"></GridPageSettings>
+    <GridSortSettings AllowUnsort="false">
+        <GridSortColumns>
+            <GridSortColumn Field="@nameof(Employee.EmployeeId)"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Employee.EmployeeId)" HeaderText="ID"></GridColumn>
+        <GridColumn Field="@nameof(Employee.FirstName)" HeaderText="First Name"></GridColumn>
+        <GridColumn Field="@nameof(Employee.LastName)" HeaderText="Last Name"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Email)" HeaderText="Email"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public string[] PagerDropdown { get; set; } = { "All", "5", "10", "15", "20" };
+
+}

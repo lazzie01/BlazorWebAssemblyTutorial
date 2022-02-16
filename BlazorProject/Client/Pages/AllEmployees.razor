@@ -1,0 +1,54 @@
+﻿@page "/all"
+@using BlazorProject.Shared
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div style="width:1100px">
+    <SfGrid @ref="@employeeGrid" DataSource="@Employees" AllowPaging="true" AllowFiltering="true">
+        <GridColumns>
+            <GridColumn Field="@nameof(Employee.EmployeeId)" HeaderText="ID"></GridColumn>
+            <GridColumn Field="@nameof(Employee.FirstName)" HeaderText="First Name"></GridColumn>
+            <GridColumn Field="@nameof(Employee.LastName)" HeaderText="Last Name"></GridColumn>
+            <GridColumn Field="@nameof(Employee.DateOfBirth)" HeaderText="Date of Birth"></GridColumn>
+            <GridColumn Field="@nameof(Employee.Gender)" HeaderText="Gender">
+                <FilterTemplate>
+                    <SfDropDownList Placeholder="All" DataSource="@genderDropDownSource" TItem="DropDownListItem" TValue="string">
+                        <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
+                        <DropDownListEvents TItem="DropDownListItem" TValue="string" ValueChange="@GenderSelectionChange"></DropDownListEvents>
+                    </SfDropDownList>
+                </FilterTemplate>
+            </GridColumn>
+            <GridColumn Field="@nameof(Employee.Email)" HeaderText="Email"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+
+@code{
+
+    public List<Employee> Employees { get; set; }
+
+    public SfGrid<Employee> employeeGrid { get; set; }
+
+    protected async void GenderSelectionChange(ChangeEventArgs<string, DropDownListItem> args)
+    {
+        if(args.Value == "All")
+        {
+           await employeeGrid.ClearFilteringAsync("Gender");
+        }
+        else
+        {
+            await employeeGrid.FilterByColumnAsync("Gender", "equal", args.Value);
+
+        }
+    }
+
+    [Inject]
+    public IEmployeeService EmployeeService { get; set; }
+
+    public List<DropDownListItem> genderDropDownSource = EnumHelper.ConvertEnumToDropDownSource<Gender>("All", "All");
+
+    protected override async Task OnInitializedAsync()
+    {
+        Employees = (await EmployeeService.GetAllEmployees()).ToList();
+    }
+}

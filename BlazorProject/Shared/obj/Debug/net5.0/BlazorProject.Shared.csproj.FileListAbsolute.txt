@@ -1,0 +1,12 @@
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\bin\Debug\net5.0\BlazorProject.Shared.deps.json
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\bin\Debug\net5.0\BlazorProject.Shared.dll
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\bin\Debug\net5.0\ref\BlazorProject.Shared.dll
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\bin\Debug\net5.0\BlazorProject.Shared.pdb
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.csproj.AssemblyReference.cache
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.AssemblyInfoInputs.cache
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.AssemblyInfo.cs
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.csproj.CoreCompileInputs.cache
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.dll
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\ref\BlazorProject.Shared.dll
+C:\Projects\BlazorWebAssemblyTutorial\BlazorProject\Shared\obj\Debug\net5.0\BlazorProject.Shared.pdb

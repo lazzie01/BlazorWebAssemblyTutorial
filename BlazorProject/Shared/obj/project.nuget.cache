@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "5G3F4J/kMCoycDq09VllZdIYFBHauhg1hWK1R7+Ld2NCxe1awqTmln0yDp+VW3RkzM66nrhuyG0WBq4j+PxSuw==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\BlazorWebAssemblyTutorial\\BlazorProject\\Shared\\BlazorProject.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User PC\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\User PC\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
